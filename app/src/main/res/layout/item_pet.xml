@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="145dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgPetAvatar"
+            android:layout_width="0dp"
+            android:layout_height="145dp" android:scaleType="centerCrop"
+            android:src="@drawable/on2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPetNameItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/icGenderItem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPetAvatar"
+            tools:text="Mochiiiiiiiiiiiiiii" />
+
+    <TextView
+        android:id="@+id/tvBreedItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        tools:text="Golden"
+        android:textColor="#888888"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@id/tvPetNameItem"
+        app:layout_constraintStart_toStartOf="@id/tvPetNameItem"
+        app:layout_constraintTop_toBottomOf="@id/tvPetNameItem" />
+
+
+    <ImageView
+        android:id="@+id/icAction"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toBottomOf="@id/tvPetNameItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPetNameItem"
+        app:tint="#40C4FF" />
+
+    <ImageView
+        android:id="@+id/icGenderItem"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_female"
+        app:layout_constraintBottom_toBottomOf="@id/icAction"
+        app:layout_constraintEnd_toStartOf="@id/icAction"
+        app:layout_constraintTop_toTopOf="@id/icAction"
+        app:tint="#FF5C8D" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

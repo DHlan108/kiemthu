@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menubar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="77dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bg_menubar"
+    android:elevation="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/menuDonate"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_donate_unactive"/>
+
+        <ImageView
+            android:id="@+id/menuFavorite"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_heart_unactive"/>
+
+        <ImageView
+            android:id="@+id/menuHome"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_unactive"/>
+
+        <ImageView
+            android:id="@+id/menuChat"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_chat_unactive"/>
+
+        <ImageView
+            android:id="@+id/menuProfile"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_avatar_unactive"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

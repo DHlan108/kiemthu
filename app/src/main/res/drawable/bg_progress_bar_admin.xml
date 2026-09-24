@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background (Màu xám nhạt) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#E0E0E0"/>
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+    <!-- Progress (Màu xanh đậm thương hiệu) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="#1D1A9B"/>
+                <corners android:radius="10dp"/>
+            </shape>
+        </clip>
+    </item>
+    
+    <!-- Secondary Progress (Màu xanh tím nhạt) -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="#D1D5FF"/>
+                <corners android:radius="10dp"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/headerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/bg_header_pink"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_circle_white"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin trạm"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgShelter"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_rescue_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvShelterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Sân nhà nhiều chó"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileContainer" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvShelterName">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thông tin chi tiết"
+                    android:textColor="#222222"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout style="@style/InfoItemStyle">
+                    <ImageView style="@style/InfoIconStyle" android:src="@drawable/ic_info" />
+                    <TextView style="@style/InfoTextStyle"
+                        android:text="Sân nhà nhiều chó (SNNC) là một dự án cá nhân của anh Quang từ năm 2019 sau khi anh giải cứu một vài bạn chó bị bắt thịt trên đường. Dần dần, dự án đón thêm nhiều bạn chó cùng tình trạng đến mức sân nhà anh không đủ chỗ để giải cứu thêm nữa, anh liền chia sẻ dự án này với cộng đồng vào năm 2021. Đến hôm nay với sự giúp đỡ to lớn và không ngừng nghỉ của cộng đồng, Sân có cơ hội cứu và giúp đỡ nhiều hơn các bạn chó, mèo cơ nhỡ. Sân cũng có một sứ mệnh to lớn là có thể cuối cùng nâng cao nhận thức của cộng đồng về phúc lợi của chó, mèo và hướng cộng đồng tới nhận nuôi thay vì tham gia mua, bán chó, mèo. Hãy đồng hành cùng Sân nhà nhiều chó thực hiện sứ mệnh này các bạn nhé!"
+                        android:justificationMode="inter_word"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoItemStyle">
+                    <ImageView style="@style/InfoIconStyle" android:src="@drawable/ic_clock" />
+                    <TextView style="@style/InfoTextStyle" android:text="Giờ mở cửa: 8:00 – 17:30 \n(Thứ Hai – Chủ Nhật)" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoItemStyle">
+                    <ImageView style="@style/InfoIconStyle" android:src="@drawable/ic_map" />
+                        <TextView style="@style/InfoTextStyle" android:text="Địa điểm: Số nhà 1, ngõ 15 đường Cột Mốc, thôn Đông Trạng, xã Cổ Đông, thị xã Sơn Tây, Hà Nội" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoItemStyle" android:layout_marginBottom="0dp">
+                    <ImageView style="@style/InfoIconStyle" android:src="@drawable/ic_phone" />
+                    <TextView style="@style/InfoTextStyle" android:text="Liên hệ: +84 988 015 445" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FB">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:background="@drawable/bg_blue_header"
+                android:paddingBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="48dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#1D1A9B" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/avatarContainer"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="88dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgPetAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_dog_manage"
+                        app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnChangeAvatar"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        app:cardBackgroundColor="#E0E0E0"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeWidth="0dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_camera"
+                            app:tint="#444444" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/barcodeCard"
+                    android:layout_width="300dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/avatarContainer">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/ivBarcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/tvRfidCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Đang tải mã..."
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView style="@style/FilterLabelStyle" android:text="Tên thú cưng" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+                    <EditText
+                        android:id="@+id/edtPetName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="12dp"
+                        tools:text="QOTYL - Cún bị đa chấn thương ở đoạn QLThạch Thất"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView style="@style/FilterLabelStyle"
+                    android:text="Loại thú cưng" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnSelectPetType"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="20dp">
+                        <TextView
+                            android:id="@+id/tvPetType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Chó"
+                            android:textColor="#222222" />
+                        <ImageView
+                            android:id="@+id/btnchomeo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_down"
+                            app:tint="#444444" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView style="@style/FilterLabelStyle" android:text="Trạng thái" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnSelectStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="20dp">
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            tools:text="Đang điều trị"
+                            android:textColor="#222222" />
+                        <ImageView
+                            android:id="@+id/btndrop"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_down"
+                            app:tint="#444444" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <TextView style="@style/FilterLabelStyle" android:text="Thông tin chi tiết" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/infor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Loại thú cưng:"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvDetailType"
+                                style="@style/PetDetailRow"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="Chưa rõ"
+                                android:textColor="#222222"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Giống:"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:id="@+id/edtDetailBreed"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Nhập giống..."
+                                android:textColor="#222222"
+                                android:inputType="text"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Giới tính:"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvDetailGender"
+                                style="@style/PetDetailRow"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="Chưa rõ"
+                                android:textColor="#222222"
+                                android:textColorHint="#888888"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Tuổi:"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:id="@+id/edtDetailAge"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Nhập tuổi..."
+                                android:textColor="#222222"
+                                android:inputType="text"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Cân nặng (kg):"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:id="@+id/edtDetailWeight"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Nhập cân nặng..."
+                                android:textColor="#222222"
+                                android:inputType="text"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Màu lông:"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:id="@+id/edtDetailColor"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:hint="Nhập màu lông..."
+                                android:textColor="#222222"
+                                android:inputType="text"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                style="@style/PetDetailRow"
+                                android:layout_width="120dp"
+                                android:text="Triệt sản:"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvDetailSterilized"
+                                style="@style/PetDetailRow"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="Chưa rõ"
+                                android:textColor="#222222"
+                                android:textColorHint="#888888"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView style="@style/FilterLabelStyle" android:text="Lịch sử cứu hộ" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+                    <EditText
+                        android:id="@+id/edtRescueHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="12dp"
+                        tools:text="3/1/26, chó lò mổ được dân cứu đưa về trạm"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView style="@style/FilterLabelStyle"
+                    android:text="Ghi chú" />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+                    <EditText
+                        android:id="@+id/edtPetNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="Nhập ghi chú..."
+                        android:padding="12dp"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:backgroundTint="@color/btn_primary_selector"
+        android:text="Thêm mã định danh"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

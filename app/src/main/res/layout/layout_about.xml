@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Về "
+        android:textColor="#222222"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvPetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Mochi"
+        android:textColor="#222222"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvAboutDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="5dp"
+        tools:text="Mochi is a sweet Ragdoll kitten who loves to be held and snuggled. She's indoor-trained, great with children, and gets along well with other cats. One blink from those blue eyes feels like a tiny love letter just for you."
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+</LinearLayout>

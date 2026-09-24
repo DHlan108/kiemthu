@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "588728555043",
+    "firebase_url": "https://rfidpetrescue-default-rtdb.firebaseio.com",
+    "project_id": "rfidpetrescue",
+    "storage_bucket": "rfidpetrescue.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588728555043:android:bfdda354dd35e7dd3ac396",
+        "android_client_info": {
+          "package_name": "com.example.rfidpetrescue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588728555043-aphdfoqk79pl620td2gl99vlnlvk855p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rfidpetrescue",
+            "certificate_hash": "465997f4be7919c1ae6628251f89486a23ea0ce3"
+          }
+        },
+        {
+          "client_id": "588728555043-mgg73vfd8kmu5g542af7j4ldltud189r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rfidpetrescue",
+            "certificate_hash": "7b172acf8ecf63c23e0a41bd85f8376bc10dbca5"
+          }
+        },
+        {
+          "client_id": "588728555043-8qmqsdc9i9vr30o7i6v92soo5b0jkul4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk_ImKpbeM_C02YgD8_inNNzqXMWBnHJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588728555043-8qmqsdc9i9vr30o7i6v92soo5b0jkul4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

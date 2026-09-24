@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back"
+                android:elevation="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Kiểm tra cuối!"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_warning_light"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgWarning"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_warning_yellow"
+                android:scaleType="fitCenter"
+                android:layout_gravity="top" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Vui lòng kiểm tra lại thời gian và xác nhận thông tin cá nhân của bạn bên dưới để hoàn tất việc đặt lịch hẹn."
+                android:textColor="#B08105"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thông tin của bạn"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Tên"
+                    android:textColor="#000000"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Số điện thoại"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Địa chỉ nhà"
+                    android:textColor="#000000"
+                    android:inputType="textPostalAddress"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvHousingType"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Loại nhà ở"
+                    android:textColor="#999999"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    app:drawableEndCompat="@android:drawable/arrow_down_float"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kinh nghiệm nuôi thú cưng"
+                        android:textColor="#999999"
+                        android:layout_marginBottom="4dp"/>
+                    <RadioGroup
+                        android:id="@+id/rgPetExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:id="@+id/rbExpYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#FF6D8A"
+                            android:text="Có"/>
+                        <RadioButton
+                            android:id="@+id/rbExpNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#FF6D8A"
+                            android:text="Không"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvReasonNoOldPet"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Lý do không nuôi thú cưng cũ nữa là vì"
+                    android:textColor="#999999"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nhà có trẻ em không?"
+                        android:textColor="#999999"
+                        android:layout_marginBottom="4dp"/>
+                    <RadioGroup
+                        android:id="@+id/rgChildren"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:id="@+id/rbChildYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#FF6D8A"
+                            android:text="Có"/>
+                        <RadioButton
+                            android:id="@+id/rbChildNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#FF6D8A"
+                            android:text="Không"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Nghề nghiệp của bạn"
+                    android:textColor="#000000"
+                    android:inputType="text"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvReasonAdoption"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Lý do nhận nuôi thú cưng"
+                    android:textColor="#999999"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp"
+                     />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lịch hẹn"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout style="@style/InfoRowStyle" android:layout_marginBottom="8dp">
+                    <ImageView android:src="@drawable/ic_clock" style="@style/IconStyle" app:tint="#FF6D8A" />
+                    <TextView android:id="@+id/tvAptTime" tools:text="Time: Afternoon (16:00)" style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRowStyle" android:layout_marginBottom="8dp">
+                    <ImageView android:src="@drawable/ic_calendar" style="@style/IconStyle" app:tint="#FF6D8A" />
+                    <TextView android:id="@+id/tvAptDate" tools:text="Date: Monday, May 26, 2025" style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRowStyle" android:layout_marginBottom="8dp">
+                    <ImageView android:src="@drawable/ic_map" style="@style/IconStyle" app:tint="#FF6D8A" />
+                    <TextView android:id="@+id/tvAptLocation" tools:text="Location: No. 22, Alley 45, Tran Thai Tong Street, Cau Giay District, Hanoi" style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRowStyle">
+                    <ImageView android:src="@drawable/ic_phone" style="@style/IconStyle" app:tint="#FF6D8A" />
+                    <TextView android:id="@+id/tvAptContact" tools:text="Contact: +84 936 888 123" style="@style/TextStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cuộc hẹn với"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgPetConfirm"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_happy"
+                        app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvPetNameConfirm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Mochi"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvPetBreedAgeConfirm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Golden | 4 month"
+                            android:textColor="#888888"
+                            android:layout_marginTop="2dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_vertical">
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_map"
+                                app:tint="#FF6D8A"/>
+                            <TextView
+                                android:id="@+id/tvPetLocationConfirm"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                tools:text="Cau Giay"
+                                android:textSize="12sp"
+                                android:textColor="#888888"/>
+                            <ImageView
+                                android:id="@+id/imgGender"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                tools:src="@drawable/ic_female"
+                                app:tint="#FF6D8A"
+                                android:layout_marginEnd="8dp"/>
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_info"
+                                app:tint="#00BCD4"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/ic_heart_unactive"
+                        app:tint="#FF6D8A"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBook"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_button_selector"
+            android:text="Đặt lịch hẹn"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

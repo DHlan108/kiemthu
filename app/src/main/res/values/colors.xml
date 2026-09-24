@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Các màu hệ thống mặc định -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Màu chủ đạo của App -->
+    <color name="primary_pink">#FF6F8E</color>
+    <color name="primary_pink_variant">#FF4F73</color>
+    <color name="primary_blue">#1D1A9B</color>
+    <color name="blue_dark">#100E55</color>
+    <color name="light_gray_bg">#F5F5F5</color>
+    <color name="text_black">#222222</color>
+    <color name="text_gray">#888888</color>
+
+    <!-- Màu trạng thái -->
+    <color name="success_color">#2BD485</color>
+    <color name="info_color">#28A5FF</color>
+    <color name="warning_color">#FFC81B</color>
+    <color name="error_color">#F04B6F</color>
+
+    <!-- Màu cho Chip cũ -->
+    <color name="chip_selected_bg">#FF6F8E</color>
+    <color name="chip_unselected_bg">#F5F5F5</color>
+    <color name="chip_selected_text">#FFFFFF</color>
+    <color name="chip_unselected_text">#444444</color>
+
+    <!-- Màu cho Chip xanh mới -->
+    <color name="error_red">#FF0000</color>
+    <color name="warning_yellow">#FFF53B</color>
+    <color name="btn_lime">#B2DF20</color>
+
+    <!-- Màu trạng thái thú cưng mới -->
+    <color name="status_treating">#C9BDF4</color>
+    <color name="status_waiting_interview">#100E55</color>
+    <color name="status_waiting_adoption">#627B12</color>
+    <color name="status_adopted">#B2DF20</color>
+    <color name="status_ready">#1D1A9B</color>
+
+    <!-- Màu trạng thái Nhận nuôi -->
+    <color name="adoption_pending">#BCBCBC</color>
+    <color name="adoption_approved">#B2DF20</color>
+    <color name="adoption_rejected">#D40000</color>
+    <color name="adoption_interview">#000000</color>
+</resources>

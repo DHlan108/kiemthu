@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Cứu hộ SNNC</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_to_your_new_adventure_nswipe_around_say_hi_take_me_home">Welcome to your new adventure!\nSwipe around – Say Hi – Take me home</string>
+    <string name="let_s_start">Let’s Start</string>
+    <string name="default_web_client_id">
+        588728555043-8qmqsdci9vr30o7i6v92soo5b0jkul4.apps.googleusercontent.com
+    </string>
+    <string name="facebook_app_id">973651565518675</string>
+    <string name="fb_login_protocol_scheme">fb973651565518675</string>
+    <string name="facebook_client_token">08883016e52c542a8dfccc17e65cf8af</string>
+</resources>

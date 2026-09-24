@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <style name="Theme.Rfidpetrescue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_pink</item>
+        <item name="colorPrimaryVariant">@color/primary_pink_variant</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#1A237E</item> <item name="colorError">#FF6B6B</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/RoundedImage12</item>
+        <item name="shapeAppearanceMediumComponent">@style/RoundedImage16</item>
+        <item name="shapeAppearanceLargeComponent">@style/RoundedImage24</item>
+    </style>
+
+
+    <style name="RoundedImage24" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="RoundedImage12" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="RoundedImage16" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="BlueDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorPrimary">@color/primary_blue</item>
+
+        <item name="android:colorAccent">@color/primary_blue</item>
+        <item name="colorAccent">@color/primary_blue</item>
+
+        <item name="android:textColorPrimary">@color/primary_blue</item>
+
+        <item name="android:buttonBarPositiveButtonStyle">@style/BlueDialogButton</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/BlueDialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/BlueDialogButton</item>
+    </style>
+
+    <style name="BlueDialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/primary_blue</item>
+    </style>
+
+</resources>

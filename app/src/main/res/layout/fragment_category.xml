@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FB">
+
+    <!-- Header Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_header_category"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Danh mục"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Search Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchBarCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:id="@+id/btnSearchCategoryAdmin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="#CCCCCC" />
+
+                <EditText
+                    android:id="@+id/etSearchCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@null"
+                    android:hint="Tìm kiếm"
+                    android:textColor="#000000"
+                    android:textColorHint="#CCCCCC"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Categories Grid -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="20dp"
+            android:useDefaultMargins="true">
+
+            <!-- Item: Thú cưng -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryPet"
+                style="@style/CategoryCardStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/icon_1"
+                        style="@style/CategoryIconStyle"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/title_1"
+                        app:layout_constraintVertical_bias="0.2" />
+                    <TextView
+                        android:id="@+id/title_1"
+                        style="@style/CategoryTitleStyle"
+                        android:text="Thú cưng"
+                        app:layout_constraintBottom_toTopOf="@+id/subtitle_1"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/subtitle_1"
+                        style="@style/CategorySubTitleStyle"
+                        android:text="Quản lý danh sách"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Item: Donate -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryDonate"
+                style="@style/CategoryCardStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/icon_2"
+                        style="@style/CategoryIconStyle"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_wallet"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/title_2"
+                        app:layout_constraintVertical_bias="0.2" />
+                    <TextView
+                        android:id="@+id/title_2"
+                        style="@style/CategoryTitleStyle"
+                        android:text="Donate"
+                        app:layout_constraintBottom_toTopOf="@+id/subtitle_2"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/subtitle_2"
+                        style="@style/CategorySubTitleStyle"
+                        android:text="Quản lý tài chính"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Item: Bệnh án -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryMedical"
+                style="@style/CategoryCardStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/icon_3"
+                        style="@style/CategoryIconStyle"
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:src="@drawable/ic_medical"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/title_3"
+                        app:layout_constraintVertical_bias="0.2" />
+                    <TextView
+                        android:id="@+id/title_3"
+                        style="@style/CategoryTitleStyle"
+                        android:text="Bệnh án"
+                        app:layout_constraintBottom_toTopOf="@+id/subtitle_3"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/subtitle_3"
+                        style="@style/CategorySubTitleStyle"
+                        android:text="Quản lý hồ sơ bệnh án"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Item: Tiêm chủng -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryVaccine"
+                style="@style/CategoryCardStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/icon_4"
+                        style="@style/CategoryIconStyle"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/ic_vaccine"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/title_4"
+                        app:layout_constraintVertical_bias="0.2" />
+                    <TextView
+                        android:id="@+id/title_4"
+                        style="@style/CategoryTitleStyle"
+                        android:text="Tiêm chủng"
+                        app:layout_constraintBottom_toTopOf="@+id/subtitle_4"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/subtitle_4"
+                        style="@style/CategorySubTitleStyle"
+                        android:text="Quản lý hồ sơ tiêm"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Item: Nhận nuôi -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryAdoption"
+                style="@style/CategoryCardStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/icon_5"
+                        style="@style/CategoryIconStyle"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_heart_fill"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/title_5"
+                        app:layout_constraintVertical_bias="0.2" />
+                    <TextView
+                        android:id="@+id/title_5"
+                        style="@style/CategoryTitleStyle"
+                        android:text="Nhận nuôi"
+                        app:layout_constraintBottom_toTopOf="@+id/subtitle_5"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/subtitle_5"
+                        style="@style/CategorySubTitleStyle"
+                        android:text="Tracking nhận nuôi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Item: Lịch -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategoryCalendar"
+                style="@style/CategoryCardStyle">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/icon_6"
+                        style="@style/CategoryIconStyle"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_calendar"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/title_6"
+                        app:layout_constraintVertical_bias="0.2" />
+                    <TextView
+                        android:id="@+id/title_6"
+                        style="@style/CategoryTitleStyle"
+                        android:text="Lịch"
+                        app:layout_constraintBottom_toTopOf="@+id/subtitle_6"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/subtitle_6"
+                        style="@style/CategorySubTitleStyle"
+                        android:text="Quản lý thời gian biểu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

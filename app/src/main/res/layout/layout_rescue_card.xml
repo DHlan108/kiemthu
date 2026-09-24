@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_rounded_12dp"
+    android:backgroundTint="#FFFFFF"
+    android:padding="12dp"
+    android:elevation="2dp"> <ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/ic_rescue_logo" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sân nhà nhiều chó"
+            android:textColor="#222222"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trung tâm bảo hộ và cứu trợ động vật"
+            android:textColor="#888888"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:layout_width="32dp"-->
+<!--        android:layout_height="32dp"-->
+<!--        android:src="@drawable/ic_note_green" />-->
+</LinearLayout>
+
