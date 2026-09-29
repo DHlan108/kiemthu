@@ -76,9 +76,35 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword.addTextChangedListener(textWatcher);
 
         btnLogin.setOnClickListener(v -> {
+
             if (isLoggingIn) return;
+
             String email = edtEmail.getText().toString().trim();
             String password = edtPassword.getText().toString().trim();
+
+            // Kiểm tra rỗng
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(
+                        this,
+                        "Vui lòng nhập đầy đủ thông tin",
+                        Toast.LENGTH_SHORT
+                ).show();
+                return;
+            }
+
+            // Kiểm tra định dạng email
+            if (!android.util.Patterns.EMAIL_ADDRESS
+                    .matcher(email)
+                    .matches()) {
+
+                Toast.makeText(
+                        this,
+                        "Email không hợp lệ",
+                        Toast.LENGTH_SHORT
+                ).show();
+
+                return;
+            }
 
             isLoggingIn = true;
             btnLogin.setEnabled(false);
@@ -86,13 +112,26 @@ public class LoginActivity extends AppCompatActivity {
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
+
                         if (task.isSuccessful()) {
-                            checkUserRole(mAuth.getCurrentUser().getUid());
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+
+                            if (user != null) {
+                                checkUserRole(user.getUid());
+                            }
+
                         } else {
+
                             isLoggingIn = false;
                             btnLogin.setText("Đăng nhập");
                             checkInput();
-                            Toast.makeText(this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
+                            Toast.makeText(
+                                    this,
+                                    "Email hoặc mật khẩu không chính xác",
+                                    Toast.LENGTH_LONG
+                            ).show();
                         }
                     });
         });
@@ -155,7 +194,11 @@ public class LoginActivity extends AppCompatActivity {
         String password = edtPassword.getText().toString().trim();
         btnLogin.setEnabled(!email.isEmpty() && !password.isEmpty());
     }
-
+    private boolean isValidEmail(String email) {
+        return android.util.Patterns.EMAIL_ADDRESS
+                .matcher(email)
+                .matches();
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
